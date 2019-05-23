@@ -192,4 +192,10 @@ public class Lufthansa extends UnicastRemoteObject implements itfCargaVuelosLuft
 		return retorno;
 	}
 
+	@Override
+	public ArrayList<clsVuelo> cargarTodos() {
+		// TODO Auto-generated method stub
+		return ListaVuelos;
+	}
+
 }
