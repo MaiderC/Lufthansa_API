@@ -141,7 +141,7 @@ public class Lufthansa extends UnicastRemoteObject implements itfCargaVuelosLuft
 	private static final long serialVersionUID = 1L;
 
 	@Override
-	public ArrayList<clsVuelo> cargarIda(String aeroOrigen, String ciudadDestino, String fecha) 
+	public ArrayList<clsVuelo> cargarIda(String aeroOrigen, String ciudadDestino, String fecha)  throws RemoteException
 	{
 		ArrayList<clsVuelo>  retorno = new ArrayList<clsVuelo>();
 		
@@ -158,7 +158,7 @@ public class Lufthansa extends UnicastRemoteObject implements itfCargaVuelosLuft
 
 	@Override
 	public ArrayList<clsVuelo> cargarIdaVuelta(String ciudadOrigen, String ciudadDestino, String fechaIda,
-			String fechaVuelta) 
+			String fechaVuelta)  throws RemoteException
 	{
 		ArrayList<clsVuelo> retorno = new ArrayList<clsVuelo>();
 		
@@ -178,7 +178,7 @@ public class Lufthansa extends UnicastRemoteObject implements itfCargaVuelosLuft
 	}
 
 	@Override
-	public ArrayList<clsVuelo> cargarCualquierMomento(String ciudadOrigen, String ciudadDestino) {
+	public ArrayList<clsVuelo> cargarCualquierMomento(String ciudadOrigen, String ciudadDestino) throws RemoteException {
 		ArrayList<clsVuelo> retorno = new ArrayList<clsVuelo>();
 		
 		for(clsVuelo a : ListaVuelos)
@@ -193,7 +193,7 @@ public class Lufthansa extends UnicastRemoteObject implements itfCargaVuelosLuft
 	}
 
 	@Override
-	public ArrayList<clsVuelo> cargarTodos() {
+	public ArrayList<clsVuelo> cargarTodos() throws RemoteException {
 		// TODO Auto-generated method stub
 		return ListaVuelos;
 	}
