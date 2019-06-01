@@ -5,12 +5,11 @@ import java.sql.Date;
 import java.util.ArrayList;
 import java.util.HashSet;
 
-import COMUN.clsVuelo;
 
 public interface itfCargaVuelosLufthansa extends Remote
 {
-	ArrayList<clsVuelo> cargarIda(String aeroOrigen, String ciudadDestino, String fecha) throws RemoteException;
-	ArrayList <clsVuelo> cargarIdaVuelta(String ciudadOrigen, String ciudadDestino, String fechaIda,String fechaVuelta) throws RemoteException;
-	ArrayList <clsVuelo> cargarCualquierMomento(String ciudadoOrigen, String ciudadDestino) throws RemoteException;
-	ArrayList <clsVuelo> cargarTodos() throws RemoteException;
+	ArrayList<String> cargarIda(String ciudadOrigen, String ciudadDestino, String fecha) throws RemoteException;
+	ArrayList<String> cargarIdaVuelta(String ciudadOrigen, String ciudadDestino, String fechaIda,String fechaVuelta) throws RemoteException;
+	ArrayList<String> cargarCualquierMomento(String ciudadoOrigen, String ciudadDestino) throws RemoteException;
+	ArrayList<String> cargarTodos() throws RemoteException;
 }
